@@ -16,6 +16,9 @@ app.use(require("cors")());
 // routes
 app.use("/api", require("./routes/auth"));
 app.use("/api", require("./routes/contact"));
+app.use('*', function (req, res) {
+    res.sendFile(path.join(__dirname,'./client/build/index.html'));
+})
 
 // server configurations.
 const PORT = process.env.PORT || 8000;
