@@ -1,6 +1,7 @@
 require("dotenv").config({ path: "./config/config.env" });
 const express = require("express");
 const morgan = require("morgan");
+import path from "path";
 
 const connectDB = require("./config/db");
 
